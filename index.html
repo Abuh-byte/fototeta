@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>se voce leu voce vai mandar fototeta hj a noite pfv</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: radial-gradient(circle at top, #0a1a2f, #000);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        color: #fff;
+    }
+
+    .card {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255,255,255,0.1);
+        padding: 70px 60px;
+        border-radius: 30px;
+        text-align: center;
+        box-shadow: 0 0 60px rgba(30,60,120,0.35);
+        animation: fadeUp 1.3s ease;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+    }
+
+    button {
+        padding: 18px 48px;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        border: 1px solid rgba(255,255,255,0.2);
+        background: linear-gradient(135deg, #0a1a2f, #101a33);
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        box-shadow: 0 0 30px rgba(0,80,160,0.4);
+    }
+
+    button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 50px rgba(120,160,255,0.6);
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: rgba(180,200,255,0.6);
+        border-radius: 50%;
+        animation: float 8s linear infinite;
+    }
+
+    @keyframes float {
+        from {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+        20% { opacity: 1; }
+        to {
+            transform: translateY(-10vh);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>clica ai em baixo</h1>
+    <button onclick="window.location.href='redirect.html'">
+        clicaaaaaaaaa (fototeta pfv)
+    </button>
+</div>
+
+<script>
+    function particle() {
+        const p = document.createElement("div");
+        p.classList.add("particle");
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.animationDuration = (Math.random() * 4 + 5) + "s";
+        document.body.appendChild(p);
+
+        setTimeout(() => p.remove(), 9000);
+    }
+
+    setInterval(particle, 350);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Redirecionando...</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: linear-gradient(180deg, #000, #0a1a2f);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .box {
+        background: rgba(0,0,0,0.65);
+        backdrop-filter: blur(18px);
+        border-radius: 30px;
+        padding: 55px;
+        text-align: center;
+        border: 1px solid rgba(255,255,255,0.12);
+        box-shadow: 0 0 70px rgba(0,90,180,0.4);
+        animation: appear 1.2s ease;
+        max-width: 440px;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+        margin-bottom: 25px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 35px;
+        line-height: 1.6;
+    }
+
+    .loader {
+        width: 65px;
+        height: 65px;
+        border: 6px solid rgba(255,255,255,0.15);
+        border-top: 6px solid #9dbbff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: auto;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: scale(0.85);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Redirecionando…</h2>
+    <p>
+        Só t avisar, qnd tu abrir o vídeo,<br>
+        vai pro minuto <strong>1:47</strong> rsrs
+    </p>
+    <div class="loader"></div>
+</div>
+
+<script>
+    setTimeout(() => {
+        window.location.href = "https://youtu.be/zNGlFo7-AKQ?si=0luZocvRWSSYbBqR&t=100";
+    }, 4500);
+</script>
+
+</body>
+</html>
